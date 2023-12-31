@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+body{
+    background-image: url(vnq.png);
+    background-size: 25% auto;
+    background-repeat: repeat;
+ }
+.snowflake {
+  width: 10px;
+  height: 10px;
+  border-radius: 45%;
+  background-color: #fff;
+  box-shadow: 4px 4px 6px rgba(11, 235, 216, 0.3);
+  position: absolute;
+  animation: fall linear infinite;
+  transform: rotate(45deg);
+}
+p{
+  color: beige;
+  font-size: 20%;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+#textContainer{
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.671);
+  text-align: center;
+  color: rgb(240, 6, 6);
+  font-weight: bold;
+  font-family: 'Ms Madi', chữ thảo;
+  font-size: 285%; 
+  overflow: hidden;
+  transform: scale(0);
+  animation: imageAvt 4s 2s forwards alternate;
+} 
+
+.img{
+  width: 60vh;
+  height: 60vh;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: scale(0);
+  top: 25%;
+  left: 40%;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.4);
+  animation: imageAvt 4s 2s forwards alternate;
+}
+@keyframes imageAvt{
+  0%{
+      transform:scale(0);
+  }
+  10%{
+      transform: scale(1.8);
+  }
+  20%{
+      transform: scale(0.5);
+  }
+  30%,100%{
+      transform: scale(1);
+  }
+}
+.img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#box{
+  width: 30%;
+  height: 15%;
+  position: absolute;
+  transform: scale(0);
+  bottom: 0;
+  left: 35%;
+  font-size: 400%;
+  font-family: 'Ms Madi', chữ thảo;
+  font-weight: bold;
+  filter: drop-shadow(0 0 25px red);
+  color: rgb(240, 6, 6);
+  z-index: 10000;
+  text-align: center;
+  animation: hien_1 2s 28s forwards alternate;
+}
+@keyframes hien_1{
+  0%{
+      transform:scale(0);
+  }
+  10%{
+      transform: scale(1.8);
+  }
+  20%{
+      transform: scale(0.5);
+  }
+  30%,100%{
+      transform: scale(1);
+  }
+}
+
+.container{
+  display: none;
+}
+.toast{
+  background: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+  z-index: 1000000;
+  animation: toast-button 2s ease-in-out forwards;
+}
+@keyframes toast-button{
+  0%{
+      transform: translateY(-100%);
+  }
+  80%{
+      transform: translateY(0%);
+  }
+  90%,91%,92%,93%,94%,95%{
+      transform: translateY(-3%);
+  }
+  100%{
+      transform: translateY(0%);
+  }
+}
+
+.traitym{
+  width: 100%;
+  position:absolute;
+  left: 0%;
+  bottom: -13%;
+  transform: scale(0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+svg .cls-1{
+  stroke: #fe0040;
+  stroke-width: 5px;
+  fill: none;
+  stroke-dasharray: 3700;
+  stroke-dashoffset: 3700;
+  animation: a_dt 6s forwards 1s;
+}
+@keyframes a_dt{
+  to{
+      stroke-dashoffset: 0;
+  }
+}
+svg .cls-3{
+  stroke: #fe0040;
+  stroke-width: 5px;
+  fill: none;
+  border-radius: 2px;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: a_dt1 6s forwards 3s;
+}
+@keyframes a_dt1{
+  0%{
+      stroke-dashoffset: 2000;
+      fill: none;
+  }
+  100%{
+      stroke-dashoffset: 0;
+      fill: red;
+  }
+}
+p{
+  position: absolute;
+  bottom: 30%;
+  left: 38%;
+  font-size: 150%;
+  font-weight: bold;
+  font-family: 'Ms Madi', chữ thảo;
+  animation: text-crush 1s forwards ;
+  cursor: pointer;
+}
+@keyframes text-crush{
+  0%{
+      color: black;
+  }
+  100%{
+      color: red;
+      filter: drop-shadow(0 0 25px red);
+  }
+}
+
+.icon{
+  position: absolute;
+  top:65%;
+  left:49.5%;
+  font-size: 40px;
+  color: white;
+  z-index: 100000;
+  opacity: 0;
+  margin-top: 5%;
+  transition: 1s;
+  cursor: pointer;
+  animation: a_icon 1s forwards 3s infinite;
+}
+@keyframes a_icon{
+  0%{
+      opacity: 1;
+      transform: rotate(0deg);
+  }
+  20%,60%{
+      opacity: 1;
+      transform: rotate(5deg);
+  }
+  40%,80%{
+      opacity: 1;
+      transform: rotate(-5deg);
+  }
+  100%{
+      opacity: 1;
+  }
+}
+.img-crush{
+  position:absolute;
+  top:-10%;
+  left: 32%;
+}
